@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:untitled/Home/HomeView/HomeScreen.dart'; // Using GetX for navigation
+import 'package:untitled/Home/HomeView/HomeScreen.dart';
+import 'package:untitled/screens/CountExample.dart'; // Using GetX for navigation
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -27,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen>
 
     // Navigate to HomeScreen after 3 seconds
     Future.delayed(const Duration(seconds: 3), () {
-      Get.offAll(() => const HomeScreen()); // Replace with your next screen
+    return  Get.to(CountExample());
     });
   }
 
