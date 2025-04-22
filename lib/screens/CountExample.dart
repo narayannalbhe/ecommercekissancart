@@ -25,7 +25,7 @@ class _CountExampleState extends State<CountExample> {
     final countProvider = Provider.of<CountProvider>(context);
 
     return Scaffold(
-      appBar: AppBar(title: Text("Count example"),),
+      appBar: AppBar(title: const Text("Count example"),),
       body:  Consumer<CountProvider>(
         builder: (BuildContext context, value, Widget? child) {
           return Column(
@@ -44,7 +44,7 @@ class _CountExampleState extends State<CountExample> {
               onPressed: (){
                 countProvider.setCount();
               },
-              child: Text("Increment")),
+              child: const Text("Increment")),
     );
   }
 }
